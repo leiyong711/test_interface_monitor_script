@@ -1,0 +1,14 @@
+{
+    "required": ["cm_homepage_version", "cm_homepage_version_dev"],
+    "type": "object",
+    "properties": {
+        "cm_homepage_version": {
+            "type": "string",
+            "minLength": 1
+        },
+        "cm_homepage_version_dev": {
+            "type": "string",
+            "minLength": 1
+        }
+    }
+}

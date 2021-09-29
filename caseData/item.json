@@ -1,0 +1,219 @@
+{
+    "required": ["spu", "skus"],
+    "type": "object",
+    "properties": {
+        "spu": {
+            "required": ["spu_id", "title", "shop_id", "sku_ids"],
+            "type": "object",
+            "properties": {
+                "spu_id": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "primary_image": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 1024,
+                    "pattern": "^(https|http)://"
+                },
+                "stock_quantity": {
+                    "type": "number"
+                },
+                "mall_id": {
+                    "type": "string"
+                },
+                "shop_id": {
+                    "type": "string"
+                },
+                "brand": {
+                    "type": "string"
+                },
+                "cate_id_details": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sku_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "information": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "key": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "skus": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sku_id": {
+                        "type": "string"
+                    },
+                    "spu_id": {
+                        "type": "string"
+                    },
+                    "images": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "minLength": 10,
+                            "maxLength": 1024,
+                            "pattern": "^(https|http)://"
+                        }
+                    },
+                    "attribute_list": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "color_image": {
+                        "type": "string",
+                        "minLength": 10,
+                        "maxLength": 1024,
+                        "pattern": "^(https|http)://"
+                    }
+                }
+            }
+        },
+        "brand": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "mall": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "region": {
+                    "type": "string"
+                },
+                "logo": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 1024,
+                    "pattern": "^(https|http)://"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "category_path": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "logo": {
+                        "type": "string",
+                        "minLength": 10,
+                        "maxLength": 1024,
+                        "pattern": "^(https|http)://"
+                    },
+                    "level": {
+                        "type": "number"
+                    },
+                    "language": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "attributes_order": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "attribute_name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "orderedValues": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "logistic": {
+            "type": "object",
+            "properties": {
+                "min_day": {
+                    "type": "number"
+                },
+                "max_day": {
+                    "type": "number"
+                },
+                "deliverable": {
+                    "type": "boolean"
+                },
+                "free_deliver": {
+                    "type": "boolean"
+                },
+                "free_shipping_requirement": {
+                    "type": "object",
+                    "properties": {
+                        "v": {
+                            "type": "string"
+                        },
+                        "c": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "sales": {
+            "type": "number"
+        }
+    }
+}

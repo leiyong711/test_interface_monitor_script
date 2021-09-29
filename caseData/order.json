@@ -1,0 +1,30 @@
+{
+    "required": ["code", "data"],
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "number",
+            "multipleOf": 200
+        },
+        "data": {
+            "required": ["orderId", "guestToken"],
+            "type": "object",
+            "properties": {
+                "orderId": {
+                    "type": "string",
+                    "minLength": 5
+                },
+                "guestToken": {
+                    "type": "string",
+                    "minLength": 18
+                }
+            }
+        },
+        "error": {
+            "type": "string"
+        },
+        "toast": {
+            "type": "string"
+        }
+    }
+}

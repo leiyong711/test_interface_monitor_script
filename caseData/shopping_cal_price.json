@@ -1,0 +1,133 @@
+{
+    "type": "object",
+    "properties": {
+        "data": {
+            "required": ["malls", "final"],
+            "type": "object",
+            "properties": {
+                "malls": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "mall": {
+                                "type": "string"
+                            },
+                            "shipping": {
+                                "type": "object",
+                                "properties": {
+                                    "v": {
+                                        "type": "string"
+                                    },
+                                    "c": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "selected_channel": {
+                                "type": "string"
+                            },
+                            "channels": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "key": {
+                                            "type": "string"
+                                        },
+                                        "f00": {
+                                            "type": "object",
+                                            "properties": {
+                                                "v": {
+                                                    "type": "string"
+                                                },
+                                                "c": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "tax": {
+                                            "type": "object",
+                                            "properties": {
+                                                "v": {
+                                                    "type": "string"
+                                                },
+                                                "c": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "amount": {
+                                "type": "object",
+                                "properties": {
+                                    "v": {
+                                        "type": "string"
+                                    },
+                                    "c": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "final": {
+                    "type": "object",
+                    "properties": {
+                        "v": {
+                            "type": "string"
+                        },
+                        "c": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "discount_sum": {
+                    "type": "object",
+                    "properties": {
+                        "v": {
+                            "type": "string"
+                        },
+                        "c": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "payment": {
+                    "type": "object",
+                    "properties": {
+                        "payment_methods": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "title": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "logo": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "code": {
+            "type": "number"
+        },
+        "error": {
+            "type": "string"
+        },
+        "toast": {
+            "type": "string"
+        }
+    }
+}

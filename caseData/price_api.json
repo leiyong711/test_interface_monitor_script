@@ -1,0 +1,79 @@
+{
+    "required": ["price"],
+    "type": "object",
+    "properties": {
+        "price": {
+            "required": ["price", "status"],
+            "type": "object",
+            "properties": {
+                "price": {
+                    "required": ["v", "c"],
+                    "type": "object",
+                    "properties": {
+                        "v": {
+                            "type": "string"
+                        },
+                        "c": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "original_price": {
+                    "type": "object",
+                    "properties": {
+                        "v": {
+                            "type": "string"
+                        },
+                        "c": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "discount": {
+                    "type": "number"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "sku_prices": {
+            "type": "object",
+            "properties": {
+                "378047556": {
+                    "type": "object",
+                    "properties": {
+                        "price": {
+                            "type": "object",
+                            "properties": {
+                                "v": {
+                                    "type": "string"
+                                },
+                                "c": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "original_price": {
+                            "type": "object",
+                            "properties": {
+                                "v": {
+                                    "type": "string"
+                                },
+                                "c": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "discount": {
+                            "type": "number"
+                        },
+                        "status": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

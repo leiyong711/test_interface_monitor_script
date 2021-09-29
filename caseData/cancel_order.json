@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "object",
+            "properties": {}
+        },
+        "code": {
+            "type": "number",
+            "multipleOf": 200
+        },
+        "error": {
+            "type": "string"
+        },
+        "toast": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "required": ["data"],
+    "type": "object",
+    "properties": {
+        "code": {
+            "type": "number",
+            "multipleOf": 200
+        },
+        "data": {
+            "required": ["order", "order_id", "order_short_id"],
+            "type": "object",
+            "properties": {
+                "order": {
+                    "type": "object",
+                    "properties": {
+                        "short_id": {
+                            "type": "string",
+                            "minLength": 5
+                        }
+                    }
+                },
+                "order_id": {
+                    "type": "string",
+                    "minLength": 5
+                },
+                "order_short_id": {
+                    "type": "string",
+                    "minLength": 5
+                }
+            }
+        },
+        "error": {
+            "type": "string"
+        },
+        "toast": {
+            "type": "string"
+        }
+    }
+}

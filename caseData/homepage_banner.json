@@ -1,0 +1,101 @@
+{
+  "required": ["id", "items"],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "required": ["spu_id", "title", "price"],
+        "type": "object",
+        "properties": {
+          "spu_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "title_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "primary_image": {
+            "type": "string"
+          },
+          "stock_quantity": {
+            "type": "number"
+          },
+          "sales": {
+            "type": "number"
+          },
+          "favors": {
+            "type": "number"
+          },
+          "price": {
+            "required": ["price"],
+            "type": "object",
+            "properties": {
+              "price": {
+                "required": ["v", "c"],
+                "type": "object",
+                "properties": {
+                  "v": {
+                    "type": "string"
+                  },
+                  "c": {
+                    "type": "string"
+                  }
+                }
+              },
+              "original_price": {
+                "type": "object",
+                "properties": {
+                  "v": {
+                    "type": "string"
+                  },
+                  "c": {
+                    "type": "string"
+                  }
+                }
+              },
+              "discount": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              }
+            }
+          },
+          "activity_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cate_id_details": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "score": {
+            "type": "number"
+          },
+          "num_reviews": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "more": {
+      "type": "boolean"
+    },
+    "scroll_id": {
+      "type": "string"
+    }
+  }
+}

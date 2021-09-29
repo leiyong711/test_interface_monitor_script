@@ -1,0 +1,6 @@
+colorama==0.4.4
+jsonschema==2.6.0
+loguru==0.5.3
+requests==2.15.1
+win32-setctime==1.0.3
+curlify==2.2.1
